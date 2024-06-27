@@ -1,0 +1,38 @@
+name: 'AI Bait'
+description: 'GitHub Action to encourage behavior changes from AI/ML scrapers that disrespect robots.txt'
+
+##
+#
+inputs:
+  destination:
+    description: '`zip <DESTINATION>` -- where to save zip file'
+    required: true
+
+  bs:
+    description: '`dd bs=<N>` -- read and write up to BYTES bytes at a time (default: 512)'
+    default: 512
+
+  count:
+    description: '`dd count=<N>` -- copy only N input blocks (default: 10000)'
+    default: 10000
+
+
+outputs:
+  destination:
+    description: 'Path to `zip` created a file'
+    value: ${{ steps.honeybot.outputs.destination }}
+
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  steps:
+    - id: honeybot
+      run: echo "destination=${INPUT_DESTINATION}" >> ${GITHUB_OUTPUT}
+      shell: bash
+
+
+branding:
+  icon: layout
+  color: black
+
