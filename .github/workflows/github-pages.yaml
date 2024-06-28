@@ -27,7 +27,7 @@ jobs:
       # ↑ Do some site building here ↑
 
       - name: Make _sweet_ for bots
-        uses: gha-utilities/ai-bait@v0.0.1
+        uses: gha-utilities/ai-bait@v0.0.2
         with:
           bs: 512
           count: 10000
