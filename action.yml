@@ -17,19 +17,16 @@ inputs:
     default: 10000
 
 
-outputs:
-  destination:
-    description: 'Path to `zip` created a file'
-    value: ${{ steps.honeybot.outputs.destination }}
+## TODO: investigate setting outputs properly
+# outputs:
+#   destination:
+#     description: 'Path to `zip` created a file'
+#     value: ${{ steps.honeybot.outputs.destination }}
 
 
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  steps:
-    - id: honeybot
-      run: echo "destination=${INPUT_DESTINATION}" >> ${GITHUB_OUTPUT}
-      shell: bash
 
 
 branding:
