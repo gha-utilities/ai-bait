@@ -66,6 +66,7 @@ Disallow: /
 
 User-agent: *
 Disallow: /assets/ai/bait.zip
+Disallow: /ai-bait/assets/ai/bait.zip
 
 Sitemap: {{ "sitemap.xml" | absolute_url }}
 
