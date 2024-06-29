@@ -53,7 +53,7 @@ published to GitHub Pages
 
 ```yaml
       - name: Make something nasty for bots
-        uses: gha-utilities/ai-bait@v0.0.2
+        uses: gha-utilities/ai-bait@v0.0.3
         with:
           bs: 512
           count: 10000
@@ -111,7 +111,7 @@ jobs:
       # ↑ Do some site building here ↑
 
       - name: Make _sweet_ for bots
-        uses: gha-utilities/ai-bait@v0.0.2
+        uses: gha-utilities/ai-bait@v0.0.3
         with:
           bs: 10g
           count: 10000
